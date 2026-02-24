@@ -1,0 +1,1154 @@
+<!-- Built for Masterpiece Construction & Development — Index 3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masterpiece Construction & Development | Hawaii's Luxury Builder</title>
+  <meta name="description" content="Masterpiece Construction & Development — disciplined residential development, luxury custom homes, land entitlement, and master-planned communities across the Hawaiian Islands and San Antonio, TX.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── CSS Variables ─────────────────────────────────────── */
+    :root {
+      --bg:         #0d0d0d;
+      --bg-alt:     #141414;
+      --bg-card:    #1a1a1a;
+      --gold:       #C4975A;
+      --gold-lt:    #d4aa72;
+      --white:      #F5F2ED;
+      --white-dim:  rgba(245,242,237,0.65);
+      --border:     rgba(196,151,90,0.2);
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-sans:  'Raleway', sans-serif;
+      --ease:       0.3s ease;
+      --ease-slow:  0.6s ease;
+      --max-w:      1200px;
+    }
+
+    /* ── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { scroll-behavior: smooth; font-size: 16px; }
+    body  { background: var(--bg); color: var(--white); font-family: var(--font-sans); font-weight: 400; line-height: 1.7; overflow-x: hidden; }
+    img   { max-width: 100%; display: block; }
+    a     { color: inherit; text-decoration: none; }
+
+    /* ── Utilities ─────────────────────────────────────────── */
+    .wrap      { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+    .label     { font-size: .63rem; font-weight: 600; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; display: block; }
+    .gold-bar  { width: 56px; height: 1px; background: var(--gold); margin: 1rem 0 2rem; }
+    .center    { text-align: center; }
+    .center .gold-bar { margin-left: auto; margin-right: auto; }
+    .h-display { font-family: var(--font-serif); font-weight: 300; line-height: 1.12; letter-spacing: .01em; }
+    .h-display em { font-style: italic; color: var(--gold-lt); }
+    .reveal    { opacity: 0; transform: translateY(28px); transition: opacity .75s ease, transform .75s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    .btn         { display: inline-block; padding: .9rem 2.2rem; font-family: var(--font-sans); font-size: .68rem; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; cursor: pointer; border: none; transition: all var(--ease); }
+    .btn-gold    { background: var(--gold); color: var(--bg); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(196,151,90,.3); }
+    .btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(245,242,237,.35); }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    /* ── Navigation ────────────────────────────────────────── */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.1rem 2rem; transition: background var(--ease), padding var(--ease); }
+    #nav.scrolled { background: rgba(13,13,13,.96); backdrop-filter: blur(12px); padding: .75rem 2rem; border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+
+    .nav-logo-name    { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; letter-spacing: .04em; display: block; line-height: 1.1; }
+    .nav-logo-sub     { font-size: .68rem; letter-spacing: .04em; color: var(--white-dim); display: block; font-weight: 300; line-height: 1.4; }
+    .nav-logo-tagline { font-size: .55rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); font-weight: 500; display: block; margin-top: .1rem; }
+
+    .nav-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; }
+    .nav-links a { font-size: .66rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--white-dim); transition: color var(--ease); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--bg) !important; padding: .4rem 1.1rem; }
+    .nav-cta:hover { background: var(--gold-lt) !important; }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--white); transition: all var(--ease); }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 80%; max-width: 300px; height: 100vh; background: #0a0a0a; border-left: 1px solid var(--border); z-index: 99; transition: right var(--ease-slow); padding: 5.5rem 2rem 2rem; flex-direction: column; gap: .25rem; }
+    .mobile-nav.open { right: 0; }
+    .mobile-nav a { display: block; font-size: .9rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--white-dim); padding: .75rem 0; border-bottom: 1px solid var(--border); transition: color var(--ease); }
+    .mobile-nav a:hover { color: var(--gold); }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 98; }
+
+    /* ── Hero ──────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden;
+      background: linear-gradient(180deg, rgba(13,13,13,.30) 0%, rgba(13,13,13,.60) 60%, rgba(13,13,13,.92) 100%),
+                  url('Brand_Assets/Website Images/DJI_20250828061724_0413_D-Edit.jpg') center/cover no-repeat;
+    }
+    #hero::before {
+      content: ''; position: absolute; inset: -20%;
+      background: radial-gradient(ellipse at 28% 42%, rgba(8,48,60,.55) 0%, transparent 58%),
+                  radial-gradient(ellipse at 70% 60%, rgba(12,38,18,.45) 0%, transparent 52%),
+                  radial-gradient(ellipse at 50% 85%, rgba(196,151,90,.05) 0%, transparent 48%);
+      animation: drift 22s ease-in-out infinite alternate;
+    }
+    @keyframes drift { from { transform: scale(1); } to { transform: scale(1.06) translate(1%, 1.5%); } }
+    #hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+    .hero-content { position: relative; z-index: 2; max-width: 820px; padding: 2rem; animation: fadein 1.5s ease forwards; }
+    @keyframes fadein { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    .hero-eyebrow { font-size: .62rem; font-weight: 600; letter-spacing: .4em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+    .hero-title   { font-family: var(--font-serif); font-size: clamp(3.2rem, 9vw, 7rem); font-weight: 300; line-height: 1.02; letter-spacing: .01em; margin-bottom: 1.5rem; }
+    .hero-title em { font-style: italic; color: var(--gold-lt); }
+    .hero-tagline  { font-size: clamp(.72rem, 2vw, .88rem); font-weight: 400; letter-spacing: .32em; text-transform: uppercase; color: var(--white-dim); margin-bottom: 3rem; }
+
+    .scroll-indicator { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--white-dim); }
+    .scroll-mouse { width: 22px; height: 36px; border: 1px solid rgba(196,151,90,.5); border-radius: 11px; display: flex; justify-content: center; padding-top: 6px; }
+    .scroll-mouse::before { content: ''; width: 3px; height: 8px; background: var(--gold); border-radius: 2px; animation: mouse 2s ease-in-out infinite; }
+    @keyframes mouse { 0%,100% { transform: none; opacity: 1; } 50% { transform: translateY(6px); opacity: .25; } }
+
+    /* ── About ─────────────────────────────────────────────── */
+    #about { padding: 7rem 0 5rem; background: var(--bg-alt); }
+    .about-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-heading { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 2rem; }
+    .about-body p  { color: var(--white-dim); font-size: .93rem; margin-bottom: 1rem; font-weight: 300; }
+    .about-close   { font-family: var(--font-serif); font-size: 1.1rem; font-style: italic; color: var(--gold-lt); margin-top: 1.25rem; font-weight: 300; }
+
+    .portrait      { position: relative; aspect-ratio: 3/4; background: var(--bg-card); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .portrait::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(196,151,90,.04), transparent); }
+    .portrait-ph   { text-align: center; color: var(--white-dim); z-index: 1; }
+    .portrait-ph svg { width: 72px; height: 72px; opacity: .18; margin-bottom: .75rem; }
+    .portrait-ph p   { font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; opacity: .45; }
+
+    /* Stats — two rows below the grid */
+    .about-stats-section { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+    .about-stats          { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; text-align: center; padding-bottom: 1.5rem; }
+    .about-stats-investor { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(196,151,90,.12); }
+    .stat-n  { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 300; color: var(--gold); display: block; line-height: 1; }
+    .stat-n.sm { font-size: 1.8rem; }
+    .stat-l  { font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--white-dim); margin-top: .35rem; display: block; }
+    .investor-row-label { font-size: .56rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(196,151,90,.45); display: block; text-align: center; padding-bottom: .5rem; }
+
+    /* Investor callout note */
+    .investor-note { margin-top: 2rem; padding: 1.5rem 2rem; border: 1px solid var(--border); background: rgba(196,151,90,.025); }
+    .investor-note p { font-size: .85rem; color: var(--white-dim); font-weight: 300; line-height: 1.85; font-style: italic; }
+
+    /* ── Services ──────────────────────────────────────────── */
+    #services { padding: 7rem 0; background: var(--bg); }
+    .sec-header { text-align: center; margin-bottom: 4rem; }
+    .sec-title  { font-size: clamp(2rem, 4vw, 3.2rem); }
+    .sec-sub    { color: var(--white-dim); font-size: .88rem; font-weight: 300; max-width: 540px; margin: .75rem auto 0; }
+
+    /* 2-col grid: left card spans 2 rows */
+    .services-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 2px; }
+    .svc-card { background: var(--bg-card); padding: 3rem 2rem; position: relative; overflow: hidden; transition: background var(--ease); }
+    .svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform var(--ease-slow); }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-card:hover { background: #1e1e1e; }
+    .svc-land  { grid-row: span 2; padding: 3.5rem 2.25rem; }
+    .svc-icon  { width: 44px; height: 44px; color: var(--gold); margin-bottom: 1.75rem; }
+    .svc-title { font-family: var(--font-serif); font-size: 1.55rem; font-weight: 400; margin-bottom: .75rem; line-height: 1.2; }
+    .svc-desc  { color: var(--white-dim); font-size: .86rem; font-weight: 300; line-height: 1.85; }
+    .svc-num   { position: absolute; bottom: 1.5rem; right: 1.75rem; font-family: var(--font-serif); font-size: 4rem; font-weight: 300; color: rgba(196,151,90,.07); line-height: 1; pointer-events: none; }
+    .svc-land .svc-desc + .svc-desc { margin-top: .8rem; }
+
+    /* ── Disciplined Approach ──────────────────────────────── */
+    #approach { padding: 4.5rem 0; background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .approach-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .approach-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.25rem; }
+    .approach-title em { font-style: italic; color: var(--gold-lt); }
+    .approach-pillars { display: flex; flex-direction: column; gap: .65rem; margin-top: 1rem; }
+    .pillar { display: flex; align-items: center; gap: .8rem; font-size: .82rem; color: var(--white-dim); font-weight: 300; }
+    .pillar::before { content: ''; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .approach-desc { font-size: .9rem; color: var(--white-dim); font-weight: 300; line-height: 1.9; }
+    .approach-cta  { margin-top: 1.75rem; }
+
+    /* ── Featured Projects ─────────────────────────────────── */
+    #project1 { padding: 7rem 0 4rem; background: var(--bg); }
+    #project2 { padding: 4rem 0;      background: var(--bg-alt); border-top: 1px solid var(--border); }
+    #project3 { padding: 4rem 0 7rem; background: var(--bg);     border-top: 1px solid var(--border); }
+
+    .project-grid     { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .project-grid.flip { direction: rtl; }
+    .project-grid.flip > * { direction: ltr; }
+
+    .proj-img { position: relative; aspect-ratio: 4/3; background: var(--bg-card); border: 1px solid var(--border); overflow: hidden; }
+    .proj-img-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .proj-img-inner.volcanic { background: linear-gradient(135deg, #0b1c22 0%, #0f2618 50%, #081510 100%); }
+    .proj-img-inner.ocean    { background: linear-gradient(135deg, #090f1f 0%, #0a1c26 50%, #0c1820 100%); }
+    .proj-img-inner.coastal  { background: linear-gradient(135deg, #0a1a10 0%, #0d2018 50%, #091812 100%); }
+    .proj-img-inner svg { opacity: .35; margin-bottom: .5rem; }
+    .proj-img-inner p   { font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,242,237,.35); margin-top: .4rem; }
+    .proj-badge { position: absolute; top: 1rem; left: 1rem; background: var(--gold); color: var(--bg); font-size: .58rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: .3rem .75rem; }
+
+    .proj-title    { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: .4rem; }
+    .proj-subtitle { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1.5rem; }
+    .proj-desc     { color: var(--white-dim); font-size: .92rem; font-weight: 300; line-height: 1.9; margin-bottom: 1rem; }
+    .proj-specs    { display: grid; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+    .ps-4 { grid-template-columns: repeat(4,1fr); }
+    .ps-3 { grid-template-columns: repeat(3,1fr); }
+    .spec-v { font-family: var(--font-serif); font-size: 1.65rem; font-weight: 300; color: var(--gold); display: block; line-height: 1; }
+    .spec-l { font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--white-dim); margin-top: .25rem; display: block; }
+
+    /* ── Gallery ───────────────────────────────────────────── */
+    #gallery { padding: 7rem 0; background: var(--bg-alt); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; margin-top: 3rem; }
+    .g-item { position: relative; aspect-ratio: 4/3; background: var(--bg-card); overflow: hidden; cursor: pointer; }
+    .g-item:first-child { grid-column: span 2; aspect-ratio: 16/7; }
+    .g-bg   { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .g-item:hover .g-bg { transform: scale(1.05); }
+    .g-item:nth-child(1) .g-bg { background: linear-gradient(135deg,#0c1f2d,#0f2a2a); }
+    .g-item:nth-child(2) .g-bg { background: linear-gradient(135deg,#091a14,#0c1f20); }
+    .g-item:nth-child(3) .g-bg { background: linear-gradient(135deg,#0e1a0e,#1a2a10); }
+    .g-item:nth-child(4) .g-bg { background: linear-gradient(135deg,#13100a,#201a0a); }
+    .g-item:nth-child(5) .g-bg { background: linear-gradient(135deg,#090f1a,#0c1a2c); }
+    .g-item:nth-child(6) .g-bg { background: linear-gradient(135deg,#13090a,#1a110f); }
+    .g-overlay { position: absolute; inset: 0; background: linear-gradient(180deg,transparent 35%,rgba(0,0,0,.88) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1rem; opacity: 0; transition: opacity var(--ease); }
+    .g-item:hover .g-overlay { opacity: 1; }
+    .g-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .g-sub { font-size: .62rem; color: var(--gold); letter-spacing: .08em; margin-top: .2rem; }
+    .g-icon { position: absolute; top: .85rem; right: .85rem; width: 30px; height: 30px; background: rgba(196,151,90,.15); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--ease); }
+    .g-item:hover .g-icon { opacity: 1; }
+    .gallery-note { text-align: center; margin-top: 1.25rem; font-size: .68rem; color: rgba(245,242,237,.28); font-style: italic; letter-spacing: .08em; }
+
+    /* Real photo integration */
+    .portrait-img  { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; z-index: 1; }
+    .proj-real-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .lb-img        { width: 100%; max-height: 78vh; object-fit: contain; display: block; }
+
+    /* Lightbox */
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.96); z-index: 200; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lb-content { max-width: 90vw; text-align: center; }
+    .lb-frame   { width: min(900px,92vw); background: #1a1a1a; border: 1px solid var(--border); overflow: hidden; }
+    .lb-caption { margin-top: 1rem; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
+    .lb-close   { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; background: none; border: 1px solid var(--border); color: var(--white); font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color var(--ease), color var(--ease); }
+    .lb-close:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── Service Areas ─────────────────────────────────────── */
+    #areas { padding: 7rem 0; background: var(--bg); }
+    .areas-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; margin-top: 3rem; }
+    .area-card  { background: var(--bg-card); padding: 3rem 1.75rem; position: relative; overflow: hidden; transition: background var(--ease); }
+    .area-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform var(--ease-slow); }
+    .area-card:hover::after { transform: scaleX(1); }
+    .area-card:hover { background: #1e1e1e; }
+    .area-num  { font-family: var(--font-serif); font-size: 2.2rem; color: var(--gold); opacity: .5; line-height: 1; margin-bottom: 1rem; display: block; }
+    .area-name { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: .35rem; }
+    .area-st   { font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+    .area-desc { font-size: .83rem; color: var(--white-dim); font-weight: 300; line-height: 1.75; }
+
+    /* ── Testimonials Carousel ─────────────────────────────── */
+    #testimonials { padding: 5rem 0; background: var(--bg-alt); position: relative; overflow: hidden; }
+    #testimonials::before { content: '\201C'; position: absolute; top: -3rem; left: 50%; transform: translateX(-50%); font-family: var(--font-serif); font-size: 20rem; color: rgba(196,151,90,.03); line-height: 1; pointer-events: none; }
+
+    .testi-carousel { position: relative; }
+    .testi-track    { position: relative; } /* height set by JS */
+    .testi-slide    { position: absolute; top: 0; left: 0; right: 0; display: none; }
+    .testi-slide.active { display: block; animation: tfade .7s ease forwards; }
+    @keyframes tfade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+    .testi-card { background: var(--bg-card); border: 1px solid var(--border); padding: 3rem 2.5rem; max-width: 900px; margin: 0 auto; position: relative; }
+    .testi-card::before { content: '\201C'; position: absolute; top: 1.25rem; left: 2.25rem; font-family: var(--font-serif); font-size: 4.5rem; color: var(--gold); opacity: .22; line-height: 1; }
+    .testi-q    { font-family: var(--font-serif); font-size: .98rem; font-weight: 300; font-style: italic; line-height: 1.85; margin-bottom: 1.5rem; padding-top: 1.5rem; }
+    .testi-name { font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+    .testi-role { font-size: .68rem; color: var(--white-dim); margin-top: .2rem; }
+    .testi-ph   { font-size: .58rem; color: rgba(245,242,237,.2); margin-top: .35rem; font-style: italic; }
+
+    .testi-dots { display: flex; justify-content: center; gap: .6rem; margin-top: 2rem; }
+    .dot        { width: 6px; height: 6px; border-radius: 50%; background: rgba(196,151,90,.25); border: none; cursor: pointer; padding: 0; transition: all var(--ease); }
+    .dot.active { background: var(--gold); width: 20px; border-radius: 3px; }
+
+    /* ── Awards ────────────────────────────────────────────── */
+    #awards { padding: 5rem 0; background: var(--bg); }
+    .awards-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 2px; margin-top: 2.5rem; }
+    .award-card { background: var(--bg-card); padding: 2rem 1.5rem; text-align: center; border-top: 2px solid transparent; transition: background var(--ease), border-color var(--ease); }
+    .award-card:hover { background: #1e1e1e; border-color: var(--gold); }
+    .award-icon  { font-size: 1.6rem; color: var(--gold); margin-bottom: .75rem; line-height: 1; font-family: var(--font-serif); }
+    .award-name  { font-size: .72rem; font-weight: 600; letter-spacing: .06em; color: var(--white); line-height: 1.45; }
+    .award-org   { font-size: .65rem; color: var(--white-dim); margin-top: .35rem; font-weight: 300; }
+    .award-card.mensa { border-top-color: var(--gold); }
+
+    /* ── Strategic Relationships Ticker ────────────────────── */
+    #relationships { padding: 3rem 0; background: var(--bg-alt); border-top: 1px solid var(--border); overflow: hidden; }
+    .ticker-label  { text-align: center; margin-bottom: 1.25rem; }
+    .ticker-outer  { overflow: hidden; position: relative; }
+    .ticker-outer::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 6rem; background: linear-gradient(90deg, var(--bg-alt), transparent); z-index: 1; pointer-events: none; }
+    .ticker-outer::after  { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 6rem; background: linear-gradient(270deg, var(--bg-alt), transparent); z-index: 1; pointer-events: none; }
+    .ticker-track  { display: flex; animation: ticker 55s linear infinite; width: max-content; }
+    .ticker-track:hover { animation-play-state: paused; }
+    .ticker-item   { display: flex; align-items: center; height: 52px; padding: 0 2.5rem; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--white-dim); white-space: nowrap; border-right: 1px solid var(--border); transition: color var(--ease); cursor: default; }
+    .ticker-item:hover { color: var(--gold); }
+    .ticker-dot    { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; margin-right: 1rem; opacity: .4; flex-shrink: 0; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* Ticker logos */
+    .ticker-logo       { height: 30px; width: auto; max-width: 130px; object-fit: contain; display: block; opacity: 0.65; transition: opacity var(--ease); }
+    .ticker-logo.dk    { filter: invert(1); }
+    .ticker-logo.jpg   { filter: invert(1); mix-blend-mode: screen; }
+    .ticker-item:hover .ticker-logo { opacity: 1; }
+    .logo-glow-wrap    { display: inline-flex; align-items: center; justify-content: center; padding: 5px 8px; border-radius: 6px; background: rgba(255,255,255,0.15); box-shadow: 0 0 18px 8px rgba(255,255,255,0.12); }
+    .logo-glow-wrap .ticker-logo { filter: none; mix-blend-mode: normal; }
+    .ticker-item-name  { font-size: .63rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--white-dim); margin-left: .65rem; white-space: nowrap; }
+
+    /* Award logo */
+    .award-logo { height: 44px; width: auto; display: block; margin: 0 auto .75rem; }
+
+    /* ── Timeline Strategy ─────────────────────────────────── */
+    #timeline { padding: 5rem 0; background: var(--bg); border-top: 1px solid var(--border); }
+    .tl-flow  { display: flex; align-items: flex-start; overflow-x: auto; padding: 2rem 0 1rem; gap: 0; margin-top: 1.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .tl-flow::-webkit-scrollbar { display: none; }
+    .tl-step  { flex: 0 0 auto; text-align: center; padding: 0 .6rem; width: 115px; }
+    .tl-dot   { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; margin: 0 auto .65rem; }
+    .tl-name  { font-size: .6rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--white); line-height: 1.55; }
+    .tl-arr   { flex: 0 0 auto; font-size: .9rem; color: var(--gold); opacity: .45; align-self: flex-start; padding-top: .1rem; margin: 0 .1rem; }
+
+    /* ── Contact ───────────────────────────────────────────── */
+    #contact { padding: 7rem 0; background: var(--bg-alt); }
+    .contact-grid    { display: grid; grid-template-columns: 1fr 1.55fr; gap: 5rem; align-items: start; }
+    .contact-heading { font-size: clamp(2.5rem, 4.5vw, 3.6rem); margin-bottom: 1.5rem; }
+    .contact-desc    { color: var(--white-dim); font-size: .9rem; font-weight: 300; line-height: 1.85; margin-bottom: 2.5rem; }
+    .c-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+    .c-icon   { width: 36px; height: 36px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold); }
+    .c-lbl    { font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--white-dim); margin-bottom: .2rem; display: block; }
+    .c-val    { font-size: .9rem; }
+    .c-val a:hover { color: var(--gold); }
+    .form     { display: grid; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .fg       { display: flex; flex-direction: column; gap: .45rem; }
+    .fg label { font-size: .6rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--white-dim); }
+    .fg input, .fg select, .fg textarea { background: var(--bg-card); border: 1px solid rgba(245,242,237,.1); color: var(--white); padding: .85rem 1rem; font-family: var(--font-sans); font-size: .86rem; font-weight: 300; outline: none; transition: border-color var(--ease); appearance: none; -webkit-appearance: none; }
+    .fg select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath fill='%23C4975A' d='M5 7L0 0h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .fg select option { background: var(--bg-card); }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--gold); }
+    .fg input::placeholder, .fg textarea::placeholder { color: rgba(245,242,237,.22); }
+    .fg textarea { resize: vertical; min-height: 130px; }
+    .form-submit .btn { width: 100%; text-align: center; margin-top: .5rem; }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    #footer { background: #080808; border-top: 1px solid var(--border); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .footer-brand .nav-logo-name    { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; display: block; margin-bottom: .15rem; }
+    .footer-brand .nav-logo-sub     { display: block; margin-bottom: .25rem; }
+    .footer-brand .nav-logo-tagline { display: block; margin-bottom: 1.5rem; }
+    .footer-desc    { color: var(--white-dim); font-size: .83rem; font-weight: 300; line-height: 1.8; max-width: 300px; margin-bottom: 1.25rem; }
+    .footer-contact a { display: block; font-size: .83rem; color: var(--white-dim); margin-bottom: .35rem; transition: color var(--ease); }
+    .footer-contact a:hover { color: var(--gold); }
+    .footer-col-title { font-size: .6rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; display: block; }
+    .footer-links, .footer-areas { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+    .footer-links a, .footer-areas li { font-size: .83rem; color: var(--white-dim); font-weight: 300; transition: color var(--ease); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { padding-top: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; }
+    .footer-copy   { font-size: .7rem; color: rgba(245,242,237,.28); letter-spacing: .05em; }
+    .footer-legal  { display: flex; gap: 2rem; list-style: none; }
+    .footer-legal a { font-size: .7rem; color: rgba(245,242,237,.28); transition: color var(--ease); }
+    .footer-legal a:hover { color: var(--gold); }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .awards-grid { grid-template-columns: repeat(3,1fr); }
+    }
+    @media (max-width: 1024px) {
+      .areas-grid     { grid-template-columns: repeat(2,1fr); }
+      .footer-grid    { grid-template-columns: 1fr 1fr; }
+      .footer-grid > *:first-child { grid-column: span 2; }
+      .approach-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .ps-4           { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      #about, #services, #project1, #project2, #project3,
+      #gallery, #areas, #testimonials, #awards, #relationships,
+      #timeline, #contact { padding: 4.5rem 0; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav { display: flex; }
+      .about-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; }
+      .project-grid.flip { direction: ltr; }
+      .portrait    { aspect-ratio: 3/2; max-height: 280px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-land    { grid-row: span 1; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .g-item:first-child { grid-column: span 2; }
+      .g-overlay   { opacity: 1; }
+      .areas-grid  { grid-template-columns: 1fr 1fr; }
+      .form-row    { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-grid > *:first-child { grid-column: span 1; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .awards-grid { grid-template-columns: repeat(2,1fr); }
+      .testi-card  { padding: 2.5rem 1.75rem; }
+    }
+    @media (max-width: 480px) {
+      .wrap         { padding: 0 1.25rem; }
+      .hero-title   { font-size: 2.8rem; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .g-item:first-child { grid-column: span 1; aspect-ratio: 4/3; }
+      .areas-grid   { grid-template-columns: 1fr; }
+      .about-stats, .about-stats-investor { grid-template-columns: repeat(3,1fr); }
+      .ps-4         { grid-template-columns: repeat(2,1fr); }
+      .testi-card   { padding: 2rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ────────────────────────────────────────── -->
+<nav id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" aria-label="Masterpiece Construction & Development — Home">
+      <span class="nav-logo-name">Masterpiece Construction</span>
+      <span class="nav-logo-sub">and Development</span>
+      <span class="nav-logo-tagline">Hawaii's Luxury Builder</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#project1">Projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#areas">Locations</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#about"        class="ml">About</a>
+  <a href="#services"     class="ml">Services</a>
+  <a href="#project1"     class="ml">Projects</a>
+  <a href="#gallery"      class="ml">Gallery</a>
+  <a href="#areas"        class="ml">Locations</a>
+  <a href="#testimonials" class="ml">Testimonials</a>
+  <a href="#contact"      class="ml">Contact Us</a>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ── Hero ──────────────────────────────────────────────── -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Established in Hawaii &nbsp;·&nbsp; Crafted for Legacy</p>
+    <h1 class="hero-title">Masterpiece<br><em>Construction</em><br>&amp; Development</h1>
+    <p class="hero-tagline">Listen Better &nbsp;·&nbsp; Plan Better &nbsp;·&nbsp; Build Better</p>
+    <a href="#gallery" class="btn btn-gold">Explore Our Work</a>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-mouse"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── About ─────────────────────────────────────────────── -->
+<section id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="about-grid">
+
+      <div class="reveal">
+        <span class="label">Our Story</span>
+        <h2 class="h-display about-heading" id="about-h">Building Hawaii's<br><em>Heart</em></h2>
+        <div class="gold-bar"></div>
+        <div class="about-body">
+          <p>Masterpiece Construction &amp; Development was founded on a simple belief: A house and a community can have a heart, and can last generations. In order to do this, we take the time to understand how the community moves, how they live, what they value, and what legacy they will leave behind — all before the pencil hits paper.</p>
+          <p>We ask: What becomes of it 20 years after the bulldozers are gone? Is it still Thriving and Beautiful? Do our Children Feel safe?</p>
+          <p>With deep roots in the Hawaiian Islands and a new expanding presence in San Antonio, Texas, we bring boutique-level attention to every project — from intimate custom residences to master-planned luxury communities. We navigate Hawaii's unique land conditions, entitlement hurdles, permitting landscape, and island building codes with confidence that only comes from years of hands-on experience.</p>
+          <p class="about-close">Every project deserves to be a Masterpiece.</p>
+        </div>
+      </div>
+
+      <div class="portrait reveal" role="img" aria-label="Chris — Founder, Masterpiece Construction &amp; Development">
+        <img src="Brand_Assets/Website Images/Headshot.png" alt="Chris — Founder, Masterpiece Construction &amp; Development" class="portrait-img">
+      </div>
+
+    </div>
+
+    <!-- Stats rows -->
+    <div class="about-stats-section reveal">
+      <div class="about-stats">
+        <div><span class="stat-n">600+</span><span class="stat-l">Lots in Planning</span></div>
+        <div><span class="stat-n">3</span><span class="stat-l">Islands Served</span></div>
+        <div><span class="stat-n" style="font-size:1.45rem;padding-top:.3rem;">Deliveries Starting<br>2027–2034</span><span class="stat-l">&nbsp;</span></div>
+      </div>
+      <span class="investor-row-label">Track Record</span>
+      <div class="about-stats-investor">
+        <div><span class="stat-n sm">$40M+</span><span class="stat-l">Capital Deployed</span></div>
+        <div><span class="stat-n sm">2,000+</span><span class="stat-l">Projects Completed</span></div>
+        <div><span class="stat-n sm">24.19%</span><span class="stat-l">Historical IRR</span></div>
+      </div>
+    </div>
+
+    <!-- Investor note -->
+    <div class="investor-note reveal">
+      <p>We work with equity investors, private lenders, financial institutions, landowners, and joint venture partners seeking disciplined residential development opportunities in Hawaii.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Services ───────────────────────────────────────────── -->
+<section id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="sec-header reveal">
+      <span class="label">What We Build</span>
+      <h2 class="h-display sec-title" id="services-h">Craftsmanship Across<br><em>Every Scale</em></h2>
+      <p class="sec-sub">From a single-family custom to the vision of an entire community, we bring the same uncompromising logic to every engagement.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Card 1: Land Entitlement — TALL LEFT (spans 2 rows) -->
+      <article class="svc-card svc-land reveal" aria-label="Land Entitlement and Ground Up MF/SF">
+        <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c-6 6-6 12 0 18s6 12 0 18M24 6c6 6 6 12 0 18s-6 12 0 18"/>
+        </svg>
+        <h3 class="svc-title">Land Entitlement &amp;<br>Ground Up MF/SF</h3>
+        <div class="svc-sub">
+          <p class="svc-desc">Transforming raw land into buildable lots that set the stage for exceptional construction. We manage every step of the programming complexities — Environmental Impact, Traffic, Entitlement, County Approvals, FEMA, ACOE, Parks, Civil, Stormwater, all Utilities, School, Police and Fire — so that by the time a shovel breaks ground, the land is ready and the path is clear.</p>
+          <p class="svc-desc">Our ground-up multifamily and single-family expertise means we don't just entitle land — we envision, design, and deliver the community from first concept to final certificate of occupancy. We have done it across Hawaii's most complex regulatory landscapes and emerged stronger every time.</p>
+        </div>
+        <span class="svc-num" aria-hidden="true">01</span>
+      </article>
+
+      <!-- Card 2: Luxury Subdivisions — TOP RIGHT -->
+      <article class="svc-card reveal" aria-label="Luxury Residential Subdivisions">
+        <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="4" y="20" width="14" height="22"/><rect x="30" y="20" width="14" height="22"/>
+          <rect x="17" y="10" width="14" height="32"/><path d="M2 42h44"/>
+        </svg>
+        <h3 class="svc-title">Luxury Residential Subdivisions</h3>
+        <p class="svc-desc">Master-planned communities where every lot, road, and amenity is designed with resort-level intention. We develop neighborhoods where quality is the standard, not the exception — creating environments that hold their value and elevate the lives of everyone who calls them home.</p>
+        <span class="svc-num" aria-hidden="true">02</span>
+      </article>
+
+      <!-- Card 3: Custom Home Building — BOTTOM RIGHT -->
+      <article class="svc-card reveal" aria-label="Custom Tailored Home Building">
+        <svg class="svc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M6 24L24 6l18 18"/><path d="M10 20v20h28V20"/><rect x="18" y="32" width="12" height="12"/>
+        </svg>
+        <h3 class="svc-title">Custom Tailored Home Building</h3>
+        <p class="svc-desc">Luxury residences designed around the way you live and the character of the land. Every detail — from the sightlines to the stonework — is deliberate and personal. We collaborate closely with you and your architect to bring a home to life that feels inevitable, as if it could only ever have been yours.</p>
+        <span class="svc-num" aria-hidden="true">03</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Disciplined Approach ────────────────────────────────── -->
+<section id="approach" aria-labelledby="approach-h">
+  <div class="wrap">
+    <div class="approach-inner">
+
+      <div class="reveal">
+        <span class="label">Our Philosophy</span>
+        <h2 class="approach-title" id="approach-h">A Disciplined Approach<br>to <em>Residential Development</em></h2>
+        <div class="approach-pillars">
+          <div class="pillar">Local Expertise</div>
+          <div class="pillar">Institutional Backing</div>
+          <div class="pillar">Structured Capital and Equity Deployment</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <p class="approach-desc">We work with equity investors, private lenders, financial institutions, landowners, and joint venture partners seeking disciplined residential development opportunities in Hawaii. Our model is built on conservative underwriting, clear governance, and aligned incentives at every stage of the capital stack.</p>
+        <div class="approach-cta">
+          <a href="#contact" class="btn btn-outline">Inquire About Partnership</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Featured Project 1: Kona TBA ───────────────────────── -->
+<section id="project1" aria-labelledby="proj1-h">
+  <div class="wrap">
+    <div class="project-grid">
+
+      <div class="proj-img reveal" role="img" aria-label="Kona TBA — 500+ lot residential development, Big Island Hawaii">
+        <img src="Brand_Assets/Website Images/Kona TBA.jpeg" alt="Kona TBA development site — Big Island, Hawaii" class="proj-real-img">
+        <span class="proj-badge">Signature Development</span>
+      </div>
+
+      <div class="reveal">
+        <span class="label">Big Island, Hawaii</span>
+        <h2 class="h-display proj-title" id="proj1-h">Kona TBA</h2>
+        <span class="proj-subtitle">Big Island, Hawaii</span>
+        <div class="gold-bar"></div>
+        <p class="proj-desc">A 500+ lot single and multi-family residential community set against the dramatic volcanic hillside landscape of Hawaii's Big Island. This project was conceived with a singular vision: to create a neighborhood where the natural grandeur of the island is not just preserved but celebrated in every home, every view corridor, and every detail of the plan.</p>
+        <p class="proj-desc">Designed for a mix of residents — buyers who understand that location and community is everything and quality is non-negotiable — this is our most ambitious project to date and a blueprint for future communities.</p>
+        <div class="proj-specs ps-4">
+          <div><span class="spec-v">500+</span><span class="spec-l">Planned Units</span></div>
+          <div><span class="spec-v">SF/MF</span><span class="spec-l">Mixed Residential</span></div>
+          <div><span class="spec-v">HI</span><span class="spec-l">Big Island</span></div>
+          <div><span class="spec-v">8 Yr</span><span class="spec-l">Build-Out</span></div>
+        </div>
+        <a href="#contact" class="btn btn-gold">Inquire About Available Lots</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Featured Project 2: Kihei Village ──────────────────── -->
+<section id="project2" aria-labelledby="proj2-h">
+  <div class="wrap">
+    <div class="project-grid flip">
+
+      <div class="proj-img reveal" role="img" aria-label="Kihei Village — 81-unit coastal development, South Maui">
+        <img src="Brand_Assets/Website Images/Kihei village.jpeg" alt="Kihei Village — South Maui, Hawaii" class="proj-real-img">
+        <span class="proj-badge">Featured Development</span>
+      </div>
+
+      <div class="reveal">
+        <span class="label">South Maui, Hawaii</span>
+        <h2 class="h-display proj-title" id="proj2-h">Kihei Village</h2>
+        <span class="proj-subtitle">South Maui, Hawaii</span>
+        <div class="gold-bar"></div>
+        <p class="proj-desc">81 resort-style residential units in the heart of Kihei, South Maui — one of Hawaii's most sought-after coastal communities. Kihei Village reached 100% soft commitment from qualified buyers before a single shovel broke ground, a testament to the depth of demand for quality development in this premier location.</p>
+        <p class="proj-desc">This project demonstrates exactly what disciplined underwriting and deep market knowledge can achieve: a community that was already home before construction began.</p>
+        <div class="proj-specs ps-3">
+          <div><span class="spec-v">81</span><span class="spec-l">Units</span></div>
+          <div><span class="spec-v">100%</span><span class="spec-l">Soft Commit Before Breaking Ground</span></div>
+          <div><span class="spec-v">Maui</span><span class="spec-l">Hawaii, HI</span></div>
+        </div>
+        <a href="#contact" class="btn btn-gold">Inquire for Future Lottery</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Featured Project 3: Kenolio Village ────────────────── -->
+<section id="project3" aria-labelledby="proj3-h">
+  <div class="wrap">
+    <div class="project-grid">
+
+      <div class="proj-img reveal" role="img" aria-label="Kenolio Village — 240-unit affordable housing, South Maui">
+        <img src="Brand_Assets/Website Images/Kenolio.jpeg" alt="Kenolio Village — South Maui, Hawaii" class="proj-real-img">
+        <span class="proj-badge">Coming Online 2028</span>
+      </div>
+
+      <div class="reveal">
+        <span class="label">South Maui, Hawaii</span>
+        <h2 class="h-display proj-title" id="proj3-h">Kenolio Village</h2>
+        <span class="proj-subtitle">South Maui, Hawaii</span>
+        <div class="gold-bar"></div>
+        <p class="proj-desc">A 240-unit affordable housing community in the heart of South Maui's Kenolio district — a culturally significant coastal landscape where an active estuary meets the Pacific. This project demands, and receives, the highest level of environmental stewardship: complex floodwater mitigation, estuary preservation protocols, and deep community stakeholder engagement are integral to our entitlement process.</p>
+        <p class="proj-desc">South Maui needs housing. Kenolio Village is our commitment to building it responsibly — thoughtfully planned, culturally respectful, and designed to serve generations of Maui families.</p>
+        <div class="proj-specs ps-3">
+          <div><span class="spec-v">240</span><span class="spec-l">Units</span></div>
+          <div><span class="spec-v">2028</span><span class="spec-l">Planned Groundbreaking</span></div>
+          <div><span class="spec-v">Maui</span><span class="spec-l">Hawaii, HI</span></div>
+        </div>
+        <a href="#contact" class="btn btn-outline">Inquire for Future Lottery</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Gallery ────────────────────────────────────────────── -->
+<section id="gallery" aria-labelledby="gallery-h">
+  <div class="wrap">
+    <div class="sec-header reveal">
+      <span class="label">Our Work</span>
+      <h2 class="h-display sec-title" id="gallery-h">Built With<br><em>Intention</em></h2>
+      <p class="sec-sub">Each project reflects its client's vision and the character of the land. Browse a selection of our work across the Hawaiian Islands.</p>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="g-item reveal" data-caption="Mini Subdivision – 3 built, 13 more planned – Kihei" role="button" tabindex="0" aria-label="View: Mini Subdivision – Kihei">
+        <img class="g-bg" src="Brand_Assets/Website Images/DJI_20250828061724_0413_D-Edit.jpg" alt="Aerial view — Mini Subdivision, Kihei, Maui">
+        <div class="g-overlay"><span class="g-lbl">Mini Subdivision</span><span class="g-sub">3 Built · 13 More Planned · Kihei</span></div>
+        <div class="g-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h5M1 1v5M13 13H8M13 13V8"/></svg></div>
+      </div>
+
+
+      <div class="g-item reveal" data-caption="Luxury Residence — Kona Coast, Big Island" role="button" tabindex="0" aria-label="View: Luxury Residence — Kona Coast">
+        <img class="g-bg" src="Brand_Assets/Website Images/dreamina-2026-02-22-8797-Mid‑range single‑family homes in Kailua‑....jpeg" alt="Luxury residence — Kona Coast, Big Island">
+        <div class="g-overlay"><span class="g-lbl">Luxury Residence</span><span class="g-sub">Kona Coast, Big Island</span></div>
+        <div class="g-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h5M1 1v5M13 13H8M13 13V8"/></svg></div>
+      </div>
+
+      <div class="g-item reveal" data-caption="Custom Bamboo Estate – Kihei" role="button" tabindex="0" aria-label="View: Custom Bamboo Estate – Kihei">
+        <img class="g-bg" src="Brand_Assets/Website Images/Feature bottom of page.jpg" alt="Custom Bamboo Estate — Kihei, Maui">
+        <div class="g-overlay"><span class="g-lbl">Custom Bamboo Estate</span><span class="g-sub">Kihei, Maui</span></div>
+        <div class="g-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h5M1 1v5M13 13H8M13 13V8"/></svg></div>
+      </div>
+
+      <div class="g-item reveal" data-caption="Honolulu Multifamily – Award Winner 2019" role="button" tabindex="0" aria-label="View: Honolulu Multifamily">
+        <img class="g-bg" src="Brand_Assets/Website Images/Pumahana_front_view_11.4[award winner 2019].jpg" alt="Pumahana — Award-Winning Multifamily, Honolulu">
+        <div class="g-overlay"><span class="g-lbl">Honolulu Multifamily</span><span class="g-sub">Award Winner 2019 · Oahu</span></div>
+        <div class="g-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h5M1 1v5M13 13H8M13 13V8"/></svg></div>
+      </div>
+
+      <div class="g-item reveal" data-caption="Kona Coast" role="button" tabindex="0" aria-label="View: Kona Coast">
+        <img class="g-bg" src="Brand_Assets/Website Images/Kona TBA.jpeg" alt="Kona Coast — Big Island, Hawaii">
+        <div class="g-overlay"><span class="g-lbl">Kona Coast</span><span class="g-sub">Big Island, Hawaii</span></div>
+        <div class="g-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h5M1 1v5M13 13H8M13 13V8"/></svg></div>
+      </div>
+
+    </div>
+    <p class="gallery-note">A selection of our work across the Hawaiian Islands — click any photo to enlarge</p>
+  </div>
+</section>
+
+<!-- ── Service Areas ──────────────────────────────────────── -->
+<section id="areas" aria-labelledby="areas-h">
+  <div class="wrap">
+    <div class="sec-header reveal">
+      <span class="label">Where We Build</span>
+      <h2 class="h-display sec-title" id="areas-h">The Islands<br>&amp; <em>Beyond</em></h2>
+      <p class="sec-sub">From the volcanic shores of the Big Island to Texas Hill Country, we bring the same standard of excellence to every location we create.</p>
+    </div>
+    <div class="areas-grid">
+
+      <article class="area-card reveal" aria-label="Big Island">
+        <span class="area-num" aria-hidden="true">I</span>
+        <h3 class="area-name">Big Island</h3>
+        <span class="area-st">Hawaii, HI</span>
+        <p class="area-desc">Our current home base. The Big Island's dramatic diversity — lava fields, lush rainforests, and oceanfront cliffs — demands builders who understand the land deeply. We do. Kona TBA is our signature project here.</p>
+      </article>
+
+      <article class="area-card reveal" aria-label="Maui">
+        <span class="area-num" aria-hidden="true">II</span>
+        <h3 class="area-name">Maui</h3>
+        <span class="area-st">Hawaii, HI</span>
+        <p class="area-desc">Maui's diverse terrain — from windward valleys to the sun-drenched West Side — calls for homes as carefully considered as they are beautifully built. Kihei Village and Kenolio Village represent our commitment to South Maui.</p>
+      </article>
+
+      <article class="area-card reveal" aria-label="Oahu">
+        <span class="area-num" aria-hidden="true">III</span>
+        <h3 class="area-name">Oahu</h3>
+        <span class="area-st">Hawaii, HI</span>
+        <p class="area-desc">Our Roots. Over 20 years building on Oahu and maintaining thousands of homes for our military across all bases. Along with Single Family Resort Style Design, whether on the North Shore, the valleys of Kailua, or the slopes above Honolulu, we brought the same boutique approach to discerning neighborhoods.</p>
+      </article>
+
+      <article class="area-card reveal" aria-label="San Antonio, Texas">
+        <span class="area-num" aria-hidden="true">IV</span>
+        <h3 class="area-name">San Antonio</h3>
+        <span class="area-st">Texas, TX</span>
+        <p class="area-desc">Masterpiece is growing. Texas Hill Country and San Antonio's expanding luxury market offer new opportunity for our model of deliberate, quality-driven development. The same standards. A new landscape.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials Carousel ──────────────────────────────── -->
+<section id="testimonials" aria-labelledby="testi-h">
+  <div class="wrap">
+    <div class="sec-header reveal">
+      <span class="label">Client Voices</span>
+      <h2 class="h-display sec-title" id="testi-h">What Our Clients<br><em>Say</em></h2>
+    </div>
+
+    <div class="testi-carousel reveal">
+      <div class="testi-track" id="testiTrack">
+
+        <div class="testi-slide active" aria-label="Testimonial — Mike & Keiki">
+          <div class="testi-card">
+            <p class="testi-q">"We interviewed multiple builders before choosing Masterpiece. The difference was immediately obvious — Chris actually listened. He asked questions no one else had thought to ask, and the result is a home that feels like it was designed just for us. Because it was."</p>
+            <p class="testi-name">Mike &amp; Keiki</p>
+            <p class="testi-role">Custom Residence · Kohala Ranch, Big Island</p>
+            <p class="testi-ph">[Placeholder — replace with real testimonial]</p>
+          </div>
+        </div>
+
+        <div class="testi-slide" aria-label="Testimonial — John, NorthStar Group">
+          <div class="testi-card">
+            <p class="testi-q">"Please accept this notice as a formal reference to Masterpiece Construction LLC's outstanding work they have performed for our organization. NorthStar Group — the world's most comprehensive infrastructure and environmental solutions company — has worked with Masterpiece Construction for close to a decade and have yet to have any problems arise that couldn't be fixed immediately. Their teams of employees are dedicated, honest, hard-working and genuinely care about the work they are performing and our clients' finished product. To date Masterpiece Construction has completed millions of dollars' worth of projects and we intend on continuing our relationship and growing with one another. Masterpiece Construction has agreed to be our first responders to a specific client that has one of the largest resorts in Hawaii and in the USA and NorthStar fully trusts and supports Masterpiece to get the work done on time, within budget and without major issues arising. Masterpiece Construction has a great team that we fully support."</p>
+            <p class="testi-name">John</p>
+            <p class="testi-role">Military Construction and Maintenance · NorthStar Group · Oahu</p>
+          </div>
+        </div>
+
+        <div class="testi-slide" aria-label="Testimonial — Alika, Ohana Military Communities">
+          <div class="testi-card">
+            <p class="testi-q">"Ohana Military Communities is pleased to recommend and notice Masterpiece Construction's dedication and hard work to our tenants and service members. Over the past few years Masterpiece has handled millions of dollars on close to a thousand projects and we have never had an issue that wasn't quickly resolved, leaving all parties satisfied. Ohana Military Communities will continue using Masterpiece Construction for as long as Masterpiece will assist us. We couldn't be happier with the level of professionalism, dedication, knowledge and flexibility Masterpiece has to offer. Masterpiece Construction is one of our main contractors and one of only two that we typically allow to work on flag or historical homes. We trust them with the most senior leadership and commanders of the armed forces — and that should say it all. Thank you Masterpiece!"</p>
+            <p class="testi-name">Alika</p>
+            <p class="testi-role">Ohana Military Communities · Oahu, Hawaii</p>
+          </div>
+        </div>
+
+        <div class="testi-slide" aria-label="Testimonial — Mike, Kihei">
+          <div class="testi-card">
+            <p class="testi-q">"Chris and his team were hands on every step of the way on building a home designed by Bamboo Living Hawaii. He has a worldwide logistical reach that helped source materials from Vietnam, Malaysia, Mongolia and Guangzhou — items that save on cost without minimizing quality. It is hard to get things done on Maui, yet Chris — in true Hawaiian style — patiently handled every obstacle without drama and kept me informed throughout. I can't imagine trusting anyone else with a project like this. As they say, 'if you want something done, ask a busy person.' They exceeded my expectations."</p>
+            <p class="testi-name">Mike</p>
+            <p class="testi-role">Custom Residence · Kihei, Maui</p>
+          </div>
+        </div>
+
+      </div><!-- .testi-track -->
+
+      <div class="testi-dots" role="tablist" aria-label="Testimonial navigation">
+        <button class="dot active" aria-label="Testimonial 1" aria-selected="true"  role="tab"></button>
+        <button class="dot"        aria-label="Testimonial 2" aria-selected="false" role="tab"></button>
+        <button class="dot"        aria-label="Testimonial 3" aria-selected="false" role="tab"></button>
+        <button class="dot"        aria-label="Testimonial 4" aria-selected="false" role="tab"></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Awards & Recognition ───────────────────────────────── -->
+<section id="awards" aria-labelledby="awards-h">
+  <div class="wrap">
+    <div class="sec-header reveal">
+      <span class="label">Recognition</span>
+      <h2 class="h-display sec-title" id="awards-h">Awards &amp;<br><em>Recognition</em></h2>
+    </div>
+    <div class="awards-grid">
+
+      <div class="award-card reveal" aria-label="BIA Construction & Design Awards">
+        <div class="award-icon" aria-hidden="true">&#9670;</div>
+        <p class="award-name">Construction &amp; Design Awards</p>
+        <p class="award-org">Building Industry Association (BIA)</p>
+      </div>
+
+      <div class="award-card reveal" aria-label="Associated Builders & Contractors">
+        <div class="award-icon" aria-hidden="true">&#9670;</div>
+        <p class="award-name">Excellence in Construction</p>
+        <p class="award-org">Associated Builders &amp; Contractors</p>
+      </div>
+
+      <div class="award-card mensa reveal" aria-label="Lifetime Mensa Member — Chris, Founder">
+        <img class="award-logo" src="Brand_Assets/Website Images/mensa_logoW.webp" alt="Mensa International">
+        <p class="award-name">Lifetime Member</p>
+        <p class="award-org">Mensa International · Founder, Chris</p>
+      </div>
+
+      <div class="award-card reveal" aria-label="Houzz">
+        <div class="award-icon" aria-hidden="true">&#9670;</div>
+        <p class="award-name">Best of Design</p>
+        <p class="award-org">Houzz</p>
+      </div>
+
+      <div class="award-card reveal" aria-label="National Association of Home Builders">
+        <div class="award-icon" aria-hidden="true">&#9670;</div>
+        <p class="award-name">Member of Excellence</p>
+        <p class="award-org">National Association of Home Builders</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Strategic Relationships Ticker ────────────────────── -->
+<section id="relationships" aria-labelledby="rel-h">
+  <div class="wrap ticker-label reveal">
+    <span class="label" id="rel-h">Strategic Relationships</span>
+  </div>
+  <div class="ticker-outer" aria-label="Strategic partners">
+    <div class="ticker-track">
+      <!-- First pass -->
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/savio.webp" alt="Savio Realty"></span>
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/hunt.svg" alt="Hunt Development"></span>
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/lendlease.svg" alt="Lendlease"></span>
+      <span class="ticker-item"><img class="ticker-logo dk" src="Brand_Assets/Website Images/lima-one-logo-dark.webp" alt="Lima One Capital"></span>
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/builders capital.png" alt="Builders Capital"></span>
+      <span class="ticker-item"><span class="ticker-dot" aria-hidden="true"></span>NorthStar Group</span>
+      <span class="ticker-item"><span class="ticker-dot" aria-hidden="true"></span>Ohana Military Communities</span>
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/hpm logo.svg" alt="HPM Supply"></span>
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/honsador-lumber-logo-white.png" alt="Honsador"></span>
+      <span class="ticker-item"><span class="ticker-dot" aria-hidden="true"></span>84 Lumber</span>
+      <span class="ticker-item"><span class="logo-glow-wrap"><img class="ticker-logo" src="Brand_Assets/Website Images/Everok Group.jpg" alt="EverOk Logistics"></span><span class="ticker-item-name">EverOk Logistics</span></span>
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/flova_1718346623.webp" alt="Flova"></span>
+      <span class="ticker-item"><img class="ticker-logo" src="Brand_Assets/Website Images/global logistical connections.png" alt="Global Logistical Connections"><span class="ticker-item-name">Global Logistical Connections</span></span>
+      <!-- Second pass for seamless loop -->
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/savio.webp" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/hunt.svg" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/lendlease.svg" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo dk" src="Brand_Assets/Website Images/lima-one-logo-dark.webp" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/builders capital.png" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-dot"></span>NorthStar Group</span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-dot"></span>Ohana Military Communities</span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/hpm logo.svg" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/honsador-lumber-logo-white.png" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><span class="ticker-dot"></span>84 Lumber</span>
+      <span class="ticker-item" aria-hidden="true"><span class="logo-glow-wrap"><img class="ticker-logo" src="Brand_Assets/Website Images/Everok Group.jpg" alt=""></span><span class="ticker-item-name">EverOk Logistics</span></span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/flova_1718346623.webp" alt=""></span>
+      <span class="ticker-item" aria-hidden="true"><img class="ticker-logo" src="Brand_Assets/Website Images/global logistical connections.png" alt=""><span class="ticker-item-name">Global Logistical Connections</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Timeline Strategy ───────────────────────────────────── -->
+<section id="timeline" aria-labelledby="tl-h">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="label">How We Work</span>
+      <h2 class="h-display sec-title" id="tl-h">Our Development<br><em>Timeline</em></h2>
+      <p class="sec-sub" style="margin-top:.75rem;">Market-driven. Conservative. Disciplined from first site to final exit.</p>
+    </div>
+    <div class="tl-flow reveal" role="list" aria-label="Development timeline steps">
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Market-Driven Site Selection</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Conservative Logical Underwriting</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Derisk Strategy</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Structured Capital Deployment</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Acquisition</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Entitlement Management</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Cost-Controlled Construction</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Stabilization</p></div>
+      <span class="tl-arr" aria-hidden="true">›</span>
+      <div class="tl-step" role="listitem"><div class="tl-dot" aria-hidden="true"></div><p class="tl-name">Disciplined Exit Strategy</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────────────── -->
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <div class="reveal">
+        <span class="label">Get in Touch</span>
+        <h2 class="h-display contact-heading" id="contact-h">Start Your<br><em>Masterpiece</em></h2>
+        <div class="gold-bar"></div>
+        <p class="contact-desc">Every great project begins with a conversation. Tell us about your vision — where you want to build, what matters most to you, and what you want your home or development to become. We'll take it from there.</p>
+
+        <div class="c-detail">
+          <div class="c-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 2.5A1.5 1.5 0 013.5 1h.88a1 1 0 01.99.856l.55 3.3a1 1 0 01-.66 1.072L3.89 6.9a9.057 9.057 0 004.21 4.21l.67-1.37a1 1 0 011.07-.658l3.3.55A1 1 0 0114 10.621V11.5A1.5 1.5 0 0112.5 13h-.5C5.373 13 1 8.627 1 3v-.5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="c-lbl">Phone</span>
+            <span class="c-val"><a href="tel:8086888839">(808) 688-8839</a></span>
+          </div>
+        </div>
+
+        <div class="c-detail">
+          <div class="c-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="1" y="3" width="14" height="10" rx="1"/><path d="M1 4l7 5 7-5"/>
+            </svg>
+          </div>
+          <div>
+            <span class="c-lbl">Email</span>
+            <span class="c-val"><a href="mailto:Chris@MC-HI.com">Chris@MC-HI.com</a></span>
+          </div>
+        </div>
+
+        <div class="c-detail">
+          <div class="c-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 1a5 5 0 100 10A5 5 0 008 1zM8 14s-7-4.5-7-8a7 7 0 0114 0c0 3.5-7 8-7 8z"/><circle cx="8" cy="6" r="2"/>
+            </svg>
+          </div>
+          <div>
+            <span class="c-lbl">Service Areas</span>
+            <span class="c-val">Big Island · Maui · Oahu · San Antonio, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="form reveal" action="#" method="POST" novalidate aria-label="Contact form">
+        <div class="form-row">
+          <div class="fg">
+            <label for="f-name">Full Name</label>
+            <input type="text" id="f-name" name="name" placeholder="Your name" autocomplete="name" required>
+          </div>
+          <div class="fg">
+            <label for="f-email">Email Address</label>
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="fg">
+            <label for="f-phone">Phone Number</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(808) 000-0000" autocomplete="tel">
+          </div>
+          <div class="fg">
+            <label for="f-interest">Area of Interest</label>
+            <select id="f-interest" name="interest">
+              <option value="" disabled selected>Select one</option>
+              <option value="land-dev">Land Development</option>
+              <option value="subdivision">Luxury Subdivisions</option>
+              <option value="custom-home">Custom Tailored Homes</option>
+              <option value="communities">Upcoming Communities</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg">
+          <label for="f-msg">Your Message</label>
+          <textarea id="f-msg" name="message" placeholder="Tell us about your project, timeline, and vision…" required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer id="footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <span class="nav-logo-name">Masterpiece Construction</span>
+        <span class="nav-logo-sub">and Development</span>
+        <span class="nav-logo-tagline">Listen Better · Plan Better · Build Better</span>
+        <p class="footer-desc">Hawaii's premier boutique construction and development firm. Serving the Big Island, Maui, Oahu, and San Antonio, TX with an uncompromising standard of quality and a client-first philosophy.</p>
+        <div class="footer-contact">
+          <a href="tel:8086888839">(808) 688-8839</a>
+          <a href="mailto:Chris@MC-HI.com">Chris@MC-HI.com</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Navigation</span>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#project1">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#areas">Locations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Service Areas</span>
+        <ul class="footer-areas">
+          <li>Big Island, Hawaii</li>
+          <li>Maui, Hawaii</li>
+          <li>Oahu, Hawaii</li>
+          <li>San Antonio, Texas</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Masterpiece Construction &amp; Development. All rights reserved.</p>
+      <ul class="footer-legal">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Lightbox ────────────────────────────────────────────── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+  <div class="lb-content">
+    <div class="lb-frame"><img id="lb-img" class="lb-img" src="" alt=""></div>
+    <p class="lb-caption" id="lb-caption"></p>
+  </div>
+  <button class="lb-close" id="lbClose" aria-label="Close image viewer">&#x2715;</button>
+</div>
+
+<!-- ── JavaScript ─────────────────────────────────────────── -->
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60), { passive: true });
+
+  // Mobile nav
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileNav');
+  const ovl = document.getElementById('navOverlay');
+  function navToggle(open) {
+    ham.classList.toggle('open', open);
+    mob.classList.toggle('open', open);
+    ovl.style.display = open ? 'block' : 'none';
+    ham.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  ham.addEventListener('click', () => navToggle(!mob.classList.contains('open')));
+  ovl.addEventListener('click', () => navToggle(false));
+  document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => navToggle(false)));
+
+  // Scroll reveal with stagger
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+      const delay = siblings.indexOf(entry.target) * 85;
+      setTimeout(() => entry.target.classList.add('in'), delay);
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Testimonial carousel
+  (function() {
+    const track  = document.getElementById('testiTrack');
+    const slides = [...track.querySelectorAll('.testi-slide')];
+    const dots   = [...document.querySelectorAll('.dot')];
+    let cur = 0, timer;
+
+    // Measure tallest slide, set track min-height
+    function setHeight() {
+      slides.forEach(s => { s.style.display = 'block'; s.style.visibility = 'hidden'; });
+      const maxH = Math.max(...slides.map(s => s.offsetHeight));
+      track.style.minHeight = maxH + 'px';
+      slides.forEach(s => { s.style.display = ''; s.style.visibility = ''; });
+      slides[cur].classList.add('active');
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight, { passive: true });
+
+    function goTo(n) {
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      dots[cur].setAttribute('aria-selected', 'false');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
+      dots[cur].setAttribute('aria-selected', 'true');
+      clearInterval(timer);
+      timer = setInterval(() => goTo(cur + 1), 7000);
+    }
+
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+    timer = setInterval(() => goTo(cur + 1), 7000);
+  })();
+
+  // Gallery lightbox
+  const lb      = document.getElementById('lightbox');
+  const lbCap   = document.getElementById('lb-caption');
+  const lbClose = document.getElementById('lbClose');
+
+  const lbImg = document.getElementById('lb-img');
+  document.querySelectorAll('.g-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const thumb = item.querySelector('.g-bg');
+      if (thumb && thumb.tagName === 'IMG') {
+        lbImg.src = thumb.src;
+        lbImg.alt = thumb.alt;
+      }
+      lbCap.textContent = item.dataset.caption || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      lbClose.focus();
+    });
+    item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
+  });
+
+  function closeLb() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
+
+</body>
+</html>

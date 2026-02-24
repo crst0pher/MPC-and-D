@@ -11,8 +11,8 @@ CLAUDE.md
 *.tmp.*
 
 # Old draft versions
-index.html
 index2.html
+index3.html
 
 # Temp
 .tmp/
