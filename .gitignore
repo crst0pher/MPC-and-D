@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Windows URL shortcuts
+*.url
+
+# Claude Code internal / temp files
+CLAUDE.md
+*.tmp.*
+
+# Old draft versions
+index.html
+index2.html
+
+# Temp
+.tmp/
