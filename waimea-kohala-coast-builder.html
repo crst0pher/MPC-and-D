@@ -1,0 +1,345 @@
+<!-- Masterpiece Construction & Development — Waimea and Kohala Coast Builder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waimea and Kohala Coast Home Builder | Kamuela, Waikoloa, Mauna Lani | Masterpiece Construction & Development</title>
+  <meta name="description" content="Custom home builder based in Kamuela serving Waimea, Waikoloa, Mauna Lani and the Kohala Coast. Hawaii license CT-32126. (808) 688-8839.">
+  <link rel="canonical" href="https://www.mc-hi.com/waimea-kohala-coast-builder">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--bg:#0d0d0d;--bg-alt:#141414;--bg-card:#1a1a1a;--gold:#C4975A;--gold-lt:#d4aa72;--white:#F5F2ED;--white-dim:rgba(245,242,237,0.65);--border:rgba(196,151,90,0.2);--font-serif:'Cormorant Garamond',serif;--font-sans:'Raleway',sans-serif;--ease:0.3s ease;--max-w:1200px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{background:var(--bg);color:var(--white);font-family:var(--font-sans);font-weight:400;line-height:1.7;}
+    img{max-width:100%;display:block;}
+    a{color:var(--gold-lt);text-decoration:none;transition:color var(--ease);}
+    a:hover{color:var(--gold);}
+    .wrap{max-width:var(--max-w);margin:0 auto;padding:0 2rem;}
+    .label{font-size:.63rem;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:block;}
+    .gold-bar{width:56px;height:1px;background:var(--gold);margin:1rem 0 2rem;}
+    .h-display{font-family:var(--font-serif);font-weight:300;line-height:1.15;}
+    .h-display em{font-style:italic;color:var(--gold-lt);}
+    .btn{display:inline-block;padding:.9rem 2.2rem;font-family:var(--font-sans);font-size:.68rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;border:none;transition:all var(--ease);}
+    .btn-gold{background:var(--gold);color:var(--bg);}
+    .btn-gold:hover{background:var(--gold-lt);}
+    .btn-outline{background:transparent;color:var(--white);border:1px solid rgba(245,242,237,.35);}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.9rem 2rem;background:rgba(13,13,13,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo-name{font-family:var(--font-serif);font-size:1.2rem;font-weight:500;letter-spacing:.04em;display:block;line-height:1.1;color:var(--white);}
+    .nav-logo-sub{font-size:.68rem;letter-spacing:.04em;color:var(--white-dim);display:block;font-weight:300;line-height:1.4;}
+    .nav-logo-tagline{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;display:block;margin-top:.1rem;}
+    .nav-links{display:flex;align-items:center;gap:1.3rem;list-style:none;flex-wrap:wrap;justify-content:flex-end;}
+    .nav-links a{font-size:.62rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--white-dim);}
+    .nav-links a:hover{color:var(--gold);}
+    .nav-cta{background:var(--gold) !important;color:var(--bg) !important;padding:.4rem 1.1rem;}
+    .nav-cta:hover{background:var(--gold-lt) !important;color:var(--bg) !important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:all var(--ease);}
+    .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+    .mobile-nav{display:none;position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:#0a0a0a;border-left:1px solid var(--border);z-index:99;transition:right .5s ease;padding:5.5rem 2rem 2rem;flex-direction:column;gap:.25rem;overflow-y:auto;}
+    .mobile-nav.open{right:0;}
+    .mobile-nav a{display:block;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--white-dim);padding:.65rem 0;border-bottom:1px solid var(--border);}
+    .mobile-nav a:hover{color:var(--gold);}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:98;}
+    .page-header{padding:9rem 0 3.5rem;background:var(--bg-alt);border-bottom:1px solid var(--border);text-align:center;}
+    .page-eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;}
+    .page-title{font-size:clamp(2.2rem,5vw,3.6rem);max-width:900px;margin:0 auto;}
+    .direct-answer-wrap{padding:3rem 0 0;background:var(--bg-alt);}
+    .direct-answer{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:2rem 2.25rem;max-width:880px;margin:0 auto;font-size:.95rem;color:var(--white);line-height:1.9;font-weight:300;}
+    .direct-answer-label{display:block;font-size:.6rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;}
+    main{background:var(--bg);}
+    .content-section{padding:4rem 0;border-top:1px solid var(--border);}
+    .content-section.alt{background:var(--bg-alt);}
+    .content h2{font-family:var(--font-serif);font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:300;margin-bottom:1.25rem;color:var(--white);}
+    .content h3{font-family:var(--font-serif);font-size:1.3rem;font-weight:500;color:var(--gold-lt);margin:2rem 0 .75rem;}
+    .content h3:first-child{margin-top:0;}
+    .content p{color:var(--white-dim);font-size:.92rem;font-weight:300;line-height:1.9;margin-bottom:1rem;}
+    .content ul,.content ol{color:var(--white-dim);font-size:.92rem;font-weight:300;line-height:1.9;margin:0 0 1.25rem 1.3rem;}
+    .content li{margin-bottom:.5rem;}
+    .content strong{color:var(--white);font-weight:600;}
+    .faq-item{margin-bottom:1.75rem;}
+    .faq-q{font-weight:600;color:var(--white);font-size:.95rem;margin-bottom:.4rem;}
+    .faq-a{color:var(--white-dim);font-size:.9rem;font-weight:300;line-height:1.85;}
+    .diff-block{background:var(--bg-card);border:1px solid var(--border);padding:2rem 2.25rem;margin:1.5rem 0;}
+    .diff-block p:last-child{margin-bottom:0;}
+    .cta-band{padding:4rem 0;background:var(--bg-alt);border-top:1px solid var(--border);text-align:center;}
+    .cta-band p{color:var(--white-dim);font-size:.95rem;margin-bottom:1.75rem;}
+    #footer{background:#080808;border-top:1px solid var(--border);padding:4.5rem 0 2.5rem;}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border);}
+    .footer-brand .nav-logo-name{font-family:var(--font-serif);font-size:1.4rem;font-weight:500;display:block;margin-bottom:.15rem;}
+    .footer-brand .nav-logo-sub{display:block;margin-bottom:.25rem;}
+    .footer-brand .nav-logo-tagline{display:block;margin-bottom:1.5rem;}
+    .footer-desc{color:var(--white-dim);font-size:.83rem;font-weight:300;line-height:1.8;max-width:300px;margin-bottom:1.25rem;}
+    .footer-contact a,.footer-contact span{display:block;font-size:.83rem;color:var(--white-dim);margin-bottom:.35rem;}
+    .footer-contact a:hover{color:var(--gold);}
+    .footer-col-title{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1rem;display:block;}
+    .footer-links,.footer-areas{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+    .footer-links a,.footer-areas li{font-size:.83rem;color:var(--white-dim);font-weight:300;}
+    .footer-links a:hover{color:var(--gold);}
+    .footer-bottom{padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;}
+    .footer-copy{font-size:.7rem;color:rgba(245,242,237,.28);letter-spacing:.05em;}
+    .footer-legal{display:flex;gap:2rem;list-style:none;}
+    .footer-legal a{font-size:.7rem;color:rgba(245,242,237,.28);}
+    .footer-legal a:hover{color:var(--gold);}
+    @media (max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;}.footer-grid>*:first-child{grid-column:span 2;}}
+    @media (max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}.mobile-nav{display:flex;}.page-header{padding:7.5rem 0 3rem;}.direct-answer{padding:1.5rem 1.5rem;}.content-section{padding:3rem 0;}.footer-grid{grid-template-columns:1fr;}.footer-grid>*:first-child{grid-column:span 1;}.footer-bottom{flex-direction:column;text-align:center;}}
+    @media (max-width:480px){.wrap{padding:0 1.25rem;}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["GeneralContractor", "HomeAndConstructionBusiness", "Organization"],
+        "@id": "https://www.mc-hi.com/#organization",
+        "name": "Masterpiece Construction & Development",
+        "legalName": "Masterpiece Construction LLC",
+        "url": "https://www.mc-hi.com",
+        "logo": { "@type": "ImageObject", "@id": "https://www.mc-hi.com/#logo", "url": "https://www.mc-hi.com/Brand_Assets/masterpiece_logo_option_1.png" },
+        "slogan": "Listen Better. Plan Better. Build Better.",
+        "telephone": "+1-808-688-8839",
+        "email": "Chris@MC-HI.com",
+        "foundingDate": "2010",
+        "founder": { "@type": "Person", "@id": "https://www.mc-hi.com/#chris-oxendine", "name": "Chris Oxendine", "jobTitle": "Owner and Principal" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Kamuela", "addressRegion": "HI", "postalCode": "96743", "addressCountry": "US" },
+        "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "Contractor License", "name": "Hawaii General Contractor License CT-32126" },
+        "identifier": { "@type": "PropertyValue", "propertyID": "Hawaii Contractor License", "value": "CT-32126" }
+      },
+      { "@type": "WebSite", "@id": "https://www.mc-hi.com/#website", "url": "https://www.mc-hi.com", "name": "Masterpiece Construction & Development", "publisher": { "@id": "https://www.mc-hi.com/#organization" }, "inLanguage": "en-US" },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.mc-hi.com/waimea-kohala-coast-builder#webpage",
+        "url": "https://www.mc-hi.com/waimea-kohala-coast-builder",
+        "name": "Waimea and Kohala Coast Home Builder | Masterpiece Construction & Development",
+        "description": "Custom home builder based in Kamuela serving Waimea, Waikoloa, Mauna Lani and the Kohala Coast.",
+        "isPartOf": { "@id": "https://www.mc-hi.com/#website" },
+        "about": { "@id": "https://www.mc-hi.com/#organization" },
+        "mainEntity": {
+          "@type": "Service",
+          "name": "Custom Home Building in Waimea and the Kohala Coast",
+          "serviceType": "Custom home builder",
+          "provider": { "@id": "https://www.mc-hi.com/#organization" },
+          "areaServed": { "@type": "City", "name": "Kamuela" }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" aria-label="Masterpiece Construction & Development — Home">
+      <span class="nav-logo-name">Masterpiece Construction</span>
+      <span class="nav-logo-sub">and Development</span>
+      <span class="nav-logo-tagline">Hawaii's Luxury Builder</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/kona-general-contractor">Kona</a></li>
+      <li><a href="/big-island-custom-home-builder">Big Island</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/about-chris-oxendine">Leadership</a></li>
+      <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/" class="ml">Home</a>
+  <a href="/kona-general-contractor" class="ml">Kona General Contractor</a>
+  <a href="/big-island-custom-home-builder" class="ml">Big Island Custom Homes</a>
+  <a href="/maui-general-contractor" class="ml">Maui General Contractor</a>
+  <a href="/kona-property-development" class="ml">Kona Property Development</a>
+  <a href="/waimea-kohala-coast-builder" class="ml">Waimea &amp; Kohala Coast</a>
+  <a href="/hawaii-sma-permitting" class="ml">SMA Permitting Guide</a>
+  <a href="/faq" class="ml">FAQ</a>
+  <a href="/about-chris-oxendine" class="ml">Leadership</a>
+  <a href="/#contact" class="ml">Contact Us</a>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<header class="page-header">
+  <div class="wrap">
+    <span class="page-eyebrow">Kamuela &middot; Kohala Coast</span>
+    <h1 class="h-display page-title">Custom Home Builder in <em>Waimea</em> and the Kohala Coast</h1>
+  </div>
+</header>
+
+<div class="direct-answer-wrap">
+  <div class="wrap">
+    <div class="direct-answer">
+      <span class="direct-answer-label">Direct Answer</span>
+      <p>Masterpiece Construction &amp; Development is a custom home builder based in Kamuela, Hawaii, serving Waimea, Waikoloa Village, Waikoloa Beach Resort, Mauna Lani, Puako and the Kohala Coast. The firm is licensed in Hawaii as Masterpiece Construction LLC under contractor license CT-32126 and builds custom and luxury single-family residences as well as resort-area residential developments. Being headquartered in Kamuela means the principal is on site rather than traveling from another island or the far side of Hawaii Island. Owner Chris Oxendine leads each project directly. Contact (808) 688-8839 or Chris@MC-HI.com.</p>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="content-section content">
+    <div class="wrap">
+      <h2>Building in the Kohala Coast resort communities</h2>
+
+      <h3>Plan on roughly two years from concept to breaking ground</h3>
+      <p>This is the number nobody publishes, and it is the one that determines whether a project is viable.</p>
+      <ul>
+        <li><strong>12 to 18 months from concept to design approval</strong>, including all design work. Timelines vary by community and by how many review cycles a submittal takes.</li>
+        <li><strong>A further 4 to 8 months for Hawaii County permit review</strong> after design approval.</li>
+      </ul>
+      <p>That is a realistic <strong>16 to 26 months before construction starts</strong>. Owners evaluating a resort lot frequently budget a fraction of that, and the gap between the assumption and the reality is where projects get into trouble — carrying a lot for two years is a real cost that has to be underwritten from the start. The timeline is not an obstacle so much as a planning input. It is entirely manageable when it is known at the outset, and expensive when it isn't.</p>
+
+      <h3>Mauna Lani has two approval layers, not one</h3>
+      <p>The Mauna Lani Resort Association maintains a Community Design Committee that reviews design across the resort, and beneath it sit 19 residential sub-associations, each with its own requirements. An owner building at Mauna Lani needs approval from their sub-association and from MLRA's Community Design Committee. Budgeting for a single approval cycle is one of the more expensive planning errors in the area, because a missed cycle is not a missed meeting — it is months added to a schedule that already runs into years.</p>
+      <p><em>Waikoloa Beach Resort and Waikoloa Village are separate communities roughly six miles apart, with different governing associations and different standards. Requirements in one do not apply in the other.</em></p>
+
+      <h3>What review actually scrutinizes</h3>
+      <p>Design review in these communities is concerned almost entirely with the exterior and the landscape:</p>
+      <ul>
+        <li>Exterior colors and materials</li>
+        <li>Lighting and view planes — how a house reads at night, and how it sits in sightlines from neighboring properties and common areas</li>
+        <li>Elevations and overall exterior appearance — massing and how the building presents from every side</li>
+        <li>Landscaping</li>
+      </ul>
+      <p>Interiors are largely outside the committees' remit.</p>
+
+      <h3>Why that raises the quality of the entire house</h3>
+      <p>Meeting resort exterior and landscape standards requires a substantial budget for those elements. Once that budget is committed, an interior finished to a lower standard is visibly out of step with the shell around it — so interiors rise to match. The result is a house built to a materially higher standard throughout than the same owner would have specified on an unrestricted lot. That flows through to value: a higher-quality build carries a higher appraised and resale value, and the design standards protect that value across the whole community. The practical implication for budgeting: do not price a resort-community home as a standard custom home with a landscaping allowance added.</p>
+
+      <h3>Site logistics — the constraint that actually bites</h3>
+      <p>The review boards are not usually the hard part of building here. Site logistics are. Resort lots are frequently tight, and staging and access are lot-specific problems that no amount of design approval solves. Where material can be laid down, how equipment reaches the work, how deliveries are sequenced on a constrained site — these drive real cost and real schedule, and they vary lot by lot rather than community by community. This is worth assessing before a lot is purchased, not after. A lot that reviews well and stages badly is a more expensive build than its price suggests, and the difference is not visible from the listing.</p>
+    </div>
+  </div>
+
+  <div class="content-section alt content">
+    <div class="wrap">
+      <h2>Areas served</h2>
+      <p>Kamuela (Waimea) &middot; Waikoloa Village &middot; Waikoloa Beach Resort &middot; Mauna Lani &middot; Puako &middot; Kawaihae &middot; Hawi &middot; Kapaau &middot; Honokaa</p>
+    </div>
+  </div>
+
+  <div class="content-section content">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item">
+        <p class="faq-q">How long does it take to build a custom home at Mauna Lani or on the Kohala Coast?</p>
+        <p class="faq-a">Plan on 12 to 18 months from concept through design approval, including all design work, followed by a further 4 to 8 months for Hawaii County permit review — roughly 16 to 26 months before construction begins, then the build itself. Timelines vary by community and by how many review cycles a submittal requires. Owners evaluating a resort lot should underwrite the full carrying period from the outset.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can I build a custom home in Mauna Lani Resort?</p>
+        <p class="faq-a">Yes, subject to design review. Mauna Lani operates a two-tier approval structure: the Mauna Lani Resort Association maintains a Community Design Committee that reviews design across the resort, and each of the 19 residential sub-associations has its own requirements as well. Both approvals are required.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What does resort design review look at?</p>
+        <p class="faq-a">Primarily the exterior and the landscape — exterior colors and materials, lighting and view planes, elevations and overall exterior appearance, and landscaping. Interiors are largely outside the committees' remit.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Does building in a resort community cost more?</p>
+        <p class="faq-a">Yes, and the reason is worth understanding. Exterior and landscape standards require substantial budget for those elements, and interiors are typically specified to match, producing a house built to a higher standard throughout. That quality carries into appraised and resale value, and the standards protect that value across the community. A resort-community home should not be budgeted as a standard custom home with landscaping added.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Is Waikoloa Village the same as Waikoloa Beach Resort?</p>
+        <p class="faq-a">No. They are separate communities roughly six miles apart, with separate governing associations, design standards and approval processes. Requirements that apply in one do not apply in the other.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section alt content">
+    <div class="wrap">
+      <div class="diff-block">
+        <h2 style="margin-bottom:1.25rem;">Why owners choose Masterpiece</h2>
+        <p><strong>Builder and developer.</strong> We entitle, finance and build — and we've taken our own projects through the full cycle, so the numbers you get at the start come from someone who has carried the risk of being wrong about them.</p>
+        <p><strong>Direct-to-factory sourcing.</strong> We import our own containers and visit the factories we buy from, which means better pricing, real quality control, and managed exposure to tariffs and duties. Most contractors buy everything through a middleman.</p>
+        <p><strong>Federal-standard safety and scheduling.</strong> We've delivered work under U.S. Army Corps of Engineers requirements including EM 385-1-1, and we run projects to critical-path schedules.</p>
+        <p><strong>Design-build.</strong> We catch design problems in design, where fixing them costs a drawing instead of a review cycle — a real advantage on a 12-to-18-month approval cycle where every failed review costs months.</p>
+        <p><strong>Sponsor capacity.</strong> On qualifying projects we can participate as a joint venture partner and construction sponsor, bringing completed-project history and balance-sheet strength to the financing.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="wrap">
+      <p>Considering a lot in Waimea, Mauna Lani or the Kohala Coast? Let's talk through the timeline.</p>
+      <a href="/#contact" class="btn btn-gold">Start a Conversation</a>
+    </div>
+  </div>
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo-name">Masterpiece Construction</span>
+        <span class="nav-logo-sub">and Development</span>
+        <span class="nav-logo-tagline">Listen Better &middot; Plan Better &middot; Build Better</span>
+        <p class="footer-desc">Licensed Hawaii general contractor and residential developer headquartered in Kamuela, Big Island. Serving West Hawaii, Maui, Oahu, and San Antonio, TX. Hawaii contractor license CT-32126.</p>
+        <div class="footer-contact">
+          <a href="tel:8086888839">(808) 688-8839</a>
+          <a href="mailto:Chris@MC-HI.com">Chris@MC-HI.com</a>
+          <span>Kamuela, HI 96743</span>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">Navigation</span>
+        <ul class="footer-links">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#project1">Projects</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Service Areas</span>
+        <ul class="footer-areas">
+          <li><a href="/kona-general-contractor">Kailua-Kona</a></li>
+          <li><a href="/big-island-custom-home-builder">Big Island</a></li>
+          <li><a href="/waimea-kohala-coast-builder">Waimea &amp; Kohala Coast</a></li>
+          <li><a href="/maui-general-contractor">Maui</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Resources</span>
+        <ul class="footer-links">
+          <li><a href="/kona-property-development">Kona Property Development</a></li>
+          <li><a href="/hawaii-sma-permitting">SMA Permitting Guide</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/about-chris-oxendine">About Chris Oxendine</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Masterpiece Construction &amp; Development. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileNav');
+  const ovl = document.getElementById('navOverlay');
+  function navToggle(open) {
+    ham.classList.toggle('open', open);
+    mob.classList.toggle('open', open);
+    ovl.style.display = open ? 'block' : 'none';
+    ham.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  ham.addEventListener('click', () => navToggle(!mob.classList.contains('open')));
+  ovl.addEventListener('click', () => navToggle(false));
+  document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => navToggle(false)));
+</script>
+
+</body>
+</html>
