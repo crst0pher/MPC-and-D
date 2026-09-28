@@ -15,3 +15,6 @@ index2.html
 
 # Temp
 .tmp/
+
+# Local preview config
+.claude/
