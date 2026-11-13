@@ -241,6 +241,15 @@
     .lb-caption { margin-top: 1rem; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
     .lb-close   { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; background: none; border: 1px solid var(--border); color: var(--white); font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color var(--ease), color var(--ease); }
     .lb-close:hover { border-color: var(--gold); color: var(--gold); }
+    .g-item.g-wide { grid-column: 1 / -1; aspect-ratio: 21/8; }
+    @media (max-width: 480px) { .g-item.g-wide { aspect-ratio: 4/3; } }
+    .g-count { position: absolute; left: .85rem; top: .85rem; z-index: 2; padding: .35rem .6rem; background: rgba(0,0,0,.6); border: 1px solid var(--gold); color: var(--white); font-size: .6rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    .lb-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; background: rgba(0,0,0,.5); border: 1px solid var(--border); color: var(--white); font-size: 1.4rem; cursor: pointer; display: none; align-items: center; justify-content: center; transition: border-color var(--ease), color var(--ease); }
+    .lb-nav:hover { border-color: var(--gold); color: var(--gold); }
+    .lightbox.is-set .lb-nav { display: flex; }
+    .lb-prev { left: 1.25rem; } .lb-next { right: 1.25rem; }
+    .lb-count { color: var(--white-dim); margin-left: .75rem; }
+    @media (max-width: 600px) { .lb-nav { top: auto; bottom: 1.25rem; transform: none; } .lb-prev { left: calc(50% - 56px); } .lb-next { right: calc(50% - 56px); } }
 
     /* ── Service Areas ─────────────────────────────────────── */
     #areas { padding: 7rem 0; background: var(--bg); }
@@ -404,7 +413,10 @@
       .ps-4         { grid-template-columns: repeat(2,1fr); }
       .testi-card   { padding: 2rem 1.25rem; }
     }
-  </style>
+      .footer-social{display:flex;gap:.75rem;margin-top:1.25rem;}
+    .footer-social a{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);color:var(--white-dim);transition:color .3s ease,border-color .3s ease;}
+    .footer-social a:hover{color:var(--gold);border-color:var(--gold);}
+</style>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- Site-wide structured data — Masterpiece Construction & Development -->
@@ -562,6 +574,7 @@
         },
         "sameAs": [
           "https://www.youtube.com/@MasterpieceConstructionHI",
+          "https://www.facebook.com/masterpiececonstructionllc",
           "https://www.buildzoom.com/contractor/masterpiece-construction-llc-mc-hi-com",
           "https://www.yelp.com/biz/masterpiece-construction-honolulu",
           "https://www.houzz.com/professionals/design-build-firms/masterpiece-construction-llc-pfvwus-pf~595763350",
@@ -928,6 +941,14 @@
         <div class="g-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h5M1 1v5M13 13H8M13 13V8"/></svg></div>
       </div>
 
+
+      <div class="g-item g-wide reveal" data-set="eleele" data-caption="Custom Residence — Waikoloa Village, Big Island" role="button" tabindex="0" aria-label="View all 62 photos: Custom Residence — Waikoloa Village">
+        <img loading="lazy" decoding="async" class="g-bg" src="Brand_Assets/Website Images/web/eleele/01-exterior.jpg" alt="Front exterior — custom residence, Waikoloa Village, Big Island">
+        <span class="g-count">62 Photos</span>
+        <div class="g-overlay"><span class="g-lbl">Custom Residence</span><span class="g-sub">Waikoloa Village, Big Island · View All 62 Photos</span></div>
+        <div class="g-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h5M1 1v5M13 13H8M13 13V8"/></svg></div>
+      </div>
+
     </div>
     <p class="gallery-note">A selection of our work across the Hawaiian Islands — click any photo to enlarge</p>
   </div>
@@ -1246,6 +1267,11 @@
           <a href="mailto:Chris@MC-HI.com">Chris@MC-HI.com</a>
           <span>Kamuela, HI 96743</span>
         </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/chris-oxendine-300a21aa" target="_blank" rel="noopener" aria-label="Chris Oxendine on LinkedIn" title="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://www.facebook.com/masterpiececonstructionllc" target="_blank" rel="noopener" aria-label="Masterpiece Construction on Facebook" title="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@MasterpieceConstructionHI" target="_blank" rel="noopener" aria-label="Masterpiece Construction on YouTube" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+        </div>
       </div>
 
       <div>
@@ -1302,6 +1328,8 @@
     <p class="lb-caption" id="lb-caption"></p>
   </div>
   <button class="lb-close" id="lbClose" aria-label="Close image viewer">&#x2715;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">&#x2039;</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#x203A;</button>
 </div>
 
 <!-- ── JavaScript ─────────────────────────────────────────── -->
@@ -1389,20 +1417,128 @@
   const lbClose = document.getElementById('lbClose');
 
   const lbImg = document.getElementById('lb-img');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  const SETS = {
+    eleele: { dir: 'Brand_Assets/Website Images/web/eleele/', place: 'Waikoloa Village', photos: [
+    ["01-exterior.jpg", "Front Exterior"],
+    ["02-exterior.jpg", "Front Exterior"],
+    ["03-exterior.jpg", "Front Exterior"],
+    ["04-exterior.jpg", "Front Exterior"],
+    ["05-exterior.jpg", "Front Exterior"],
+    ["06-exterior.jpg", "Front Exterior"],
+    ["07-exterior.jpg", "Front Exterior"],
+    ["08-exterior.jpg", "Front Exterior"],
+    ["09-entry.jpg", "Front Entry"],
+    ["10-entry.jpg", "Front Entry"],
+    ["11-great-room.jpg", "Great Room (virtually staged)"],
+    ["12-great-room.jpg", "Great Room"],
+    ["13-great-room.jpg", "Great Room"],
+    ["14-great-room.jpg", "Great Room"],
+    ["15-great-room.jpg", "Great Room"],
+    ["16-great-room.jpg", "Great Room"],
+    ["17-great-room.jpg", "Great Room"],
+    ["18-kitchen.jpg", "Kitchen"],
+    ["19-kitchen.jpg", "Kitchen"],
+    ["20-kitchen.jpg", "Kitchen"],
+    ["21-kitchen.jpg", "Kitchen"],
+    ["22-kitchen.jpg", "Kitchen"],
+    ["23-kitchen.jpg", "Kitchen"],
+    ["24-kitchen.jpg", "Kitchen"],
+    ["25-kitchen.jpg", "Kitchen"],
+    ["26-laundry.jpg", "Laundry"],
+    ["27-primary-bedroom.jpg", "Primary Bedroom (virtually staged)"],
+    ["28-primary-bedroom.jpg", "Primary Bedroom"],
+    ["29-primary-bedroom.jpg", "Primary Bedroom"],
+    ["30-primary-bedroom.jpg", "Primary Bedroom"],
+    ["31-primary-bedroom.jpg", "Primary Bedroom"],
+    ["32-primary-bath.jpg", "Primary Bath"],
+    ["33-primary-bath.jpg", "Primary Bath"],
+    ["34-primary-bath.jpg", "Primary Bath"],
+    ["35-closet.jpg", "Walk-In Closet"],
+    ["36-bedroom.jpg", "Guest Bedroom (virtually staged)"],
+    ["37-bedroom.jpg", "Guest Bedroom"],
+    ["38-bedroom.jpg", "Guest Bedroom"],
+    ["39-bedroom.jpg", "Guest Bedroom"],
+    ["40-bedroom.jpg", "Guest Bedroom"],
+    ["41-hallway.jpg", "Hallway"],
+    ["42-guest-bath.jpg", "Guest Bath"],
+    ["43-guest-bath.jpg", "Guest Bath"],
+    ["44-lanai.jpg", "Covered Lanai"],
+    ["45-lanai.jpg", "Covered Lanai"],
+    ["46-lanai.jpg", "Covered Lanai"],
+    ["47-yard.jpg", "Rear Yard"],
+    ["48-yard.jpg", "Rear Yard"],
+    ["49-yard.jpg", "Rear Yard"],
+    ["50-yard.jpg", "Rear Yard"],
+    ["51-yard.jpg", "Rear Yard"],
+    ["52-yard.jpg", "Rear Yard"],
+    ["53-garage.jpg", "Garage"],
+    ["54-garage.jpg", "Garage"],
+    ["55-aerial.jpg", "Aerial View"],
+    ["56-aerial.jpg", "Aerial View"],
+    ["57-aerial.jpg", "Aerial View"],
+    ["58-aerial.jpg", "Aerial View"],
+    ["59-aerial.jpg", "Aerial View"],
+    ["60-aerial.jpg", "Aerial View"],
+    ["61-aerial.jpg", "Aerial View"],
+    ["62-floor-plan.jpg", "Floor Plan"]
+    ] }
+  };
+  let curSet = null, curIdx = 0;
+
+  function showSlide(i) {
+    const set = curSet, n = set.photos.length;
+    curIdx = (i + n) % n;
+    const [file, cap] = set.photos[curIdx];
+    lbImg.src = set.dir + file;
+    lbImg.alt = cap + ' — ' + set.place;
+    lbCap.innerHTML = '';
+    lbCap.append(cap + ' — ' + set.place);
+    const c = document.createElement('span'); c.className = 'lb-count'; c.textContent = (curIdx + 1) + ' / ' + n;
+    lbCap.append(c);
+    [1, -1].forEach(d => { new Image().src = set.dir + set.photos[(curIdx + d + n) % n][0]; });
+  }
+
+  function openLb() {
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
   document.querySelectorAll('.g-item').forEach(item => {
     item.addEventListener('click', () => {
-      const thumb = item.querySelector('.g-bg');
-      if (thumb && thumb.tagName === 'IMG') {
-        lbImg.src = thumb.src;
-        lbImg.alt = thumb.alt;
+      curSet = SETS[item.dataset.set] || null;
+      lb.classList.toggle('is-set', !!curSet);
+      if (curSet) {
+        showSlide(0);
+      } else {
+        const thumb = item.querySelector('.g-bg');
+        if (thumb && thumb.tagName === 'IMG') {
+          lbImg.src = thumb.src;
+          lbImg.alt = thumb.alt;
+        }
+        lbCap.textContent = item.dataset.caption || '';
       }
-      lbCap.textContent = item.dataset.caption || '';
-      lb.classList.add('open');
-      lb.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      lbClose.focus();
+      openLb();
     });
     item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
+  });
+
+  lbPrev.addEventListener('click', () => curSet && showSlide(curIdx - 1));
+  lbNext.addEventListener('click', () => curSet && showSlide(curIdx + 1));
+  document.addEventListener('keydown', e => {
+    if (!curSet || !lb.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') showSlide(curIdx - 1);
+    if (e.key === 'ArrowRight') showSlide(curIdx + 1);
+  });
+  let touchX = null;
+  lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (!curSet || touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX; touchX = null;
+    if (Math.abs(dx) > 40) showSlide(curIdx + (dx < 0 ? 1 : -1));
   });
 
   function closeLb() {
